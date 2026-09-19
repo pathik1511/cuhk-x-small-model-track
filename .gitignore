@@ -1,0 +1,54 @@
+# ---------------------------------------------------------------------------
+# COMPETITION DATA. Not a convenience: CUHK-X License v2.0 section 5 makes the
+# dataset non-redistributable, and Competition Rules 2.4b forbid making it
+# available to non-participants. Nothing derived from the raw frames ships.
+# ---------------------------------------------------------------------------
+data/
+Rose_lab_data/          # NTU RGB+D 120, separate ROSE Lab DUA, also non-redistributable
+*.zip
+*.tgz
+*.tar
+yolo_boxes*.csv         # person boxes derived from competition frames
+scan_index.pkl
+
+# Model weights and checkpoints
+*.pt
+*.pth
+*.npz
+*.h5
+*.ckpt
+*.onnx
+*.safetensors
+checkpoints/
+model/
+runs/
+runs_*/
+
+# Submissions and out-of-fold predictions (test-set outputs)
+sub_*.csv
+verify_out.csv
+probs_*.csv
+oof*.csv
+
+# Secrets
+.env
+*.key
+*.pem
+kaggle.json
+.kaggle/
+secrets*
+credentials*
+
+# Local scratch
+logs/
+__pycache__/
+*.pyc
+_attic/
+_audit/
+_probe/
+_irtest2/
+analysis/
+"Claude outputs"/
+FINAL/
+*.bak
+_github_export/

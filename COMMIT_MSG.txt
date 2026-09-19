@@ -1,0 +1,35 @@
+Add private leaderboard results and retract the section 32.4 mechanism
+
+Final standing: rank 127 of 324, private 0.71568 (146 of 204 clips). Top 15
+advanced to verification; this entry did not.
+
+The private release inverted the public ranking inside the top cluster.
+
+  submission          public              private
+  blend042            0.67661 (worst)     0.74019  (151/204, best)
+  3fold ensemble      0.68159             0.72058  (147)
+  soup4               0.68656             0.71568  (146)
+  soup3   (submitted) 0.69651 (best)      0.71078  (145, worst)
+
+Two corrections follow.
+
+Section 32.4 is retracted. It claimed out-of-fold validation is optimistic
+for cross-family blending, invented to explain a blend that gained +28 clips
+on 2,702 subject-disjoint clips and then lost 4 on a 201-clip public probe.
+Private shows the blend was worth +6 clips over what shipped and would have
+placed above rank 117. The measurement was right; the probe was noise; the
+mechanism was a story told about noise.
+
+Binomial noise on 201 clips at p=0.70 has a standard deviation of 6.5 clips.
+Nearly every comparison this campaign settled on the public leaderboard was
+smaller than that.
+
+  When a well-powered subject-disjoint validation set and a small public
+  probe disagree, believe the validation set.
+
+Section 24's weight-soup claim is weakened. The soup beat its own three-model
+ensemble 140/201 on public but lost 145 to 147 on the larger private half.
+Averaging as a regularizer was a public-set artifact. The size argument
+survives: the soup fits the cap and the ensemble does not.
+
+README now leads with the final rank and carries both corrections.
